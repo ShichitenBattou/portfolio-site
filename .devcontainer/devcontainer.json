@@ -11,7 +11,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"streetsidesoftware.code-spell-checker-british-english"
+				"streetsidesoftware.code-spell-checker-british-english",
+				"vivaxy.vscode-conventional-commits"
 			]
 		}
 	},
