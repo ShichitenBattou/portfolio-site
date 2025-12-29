@@ -1,5 +1,5 @@
 ---
-applyTo: "nest-api/**"
+applyTo: "nest-api/**/*"
 ---
 
 # Nest API Review Instructions
