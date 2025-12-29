@@ -14,3 +14,4 @@ This file contains instructions for GitHub Copilot to help it generate code that
 - テストコードが適切に追加されているか確認すること。
 - ドキュメントが必要に応じて更新されているか確認すること。
 - 提案されたコードが最新のベストプラクティスに従っているか確認すること。
+- PRのタイトルやコミットメッセージはConventional Commitsに従うこと。
