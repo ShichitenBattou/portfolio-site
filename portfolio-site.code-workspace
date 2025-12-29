@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "nest-api"
+		},
+		{
+			"path": "angular-front"
+		}
+	],
+	"settings": {}
+}
