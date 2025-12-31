@@ -14,3 +14,4 @@ packages:
   - name: github/github-mcp-server@v0.26.3
   - name: go-task/task@v3.46.4
   - name: volta-cli/volta@v2.0.2
+  - name: astral-sh/uv@0.9.20

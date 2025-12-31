@@ -1,13 +1,20 @@
 {
 	"folders": [
 		{
+			"name": "portfolio-site",
 			"path": "."
 		},
 		{
-			"path": "nest-api"
+			"name": "portfolio-web-api",
+			"path": "portfolio-web-api"
 		},
 		{
+			"name": "angular-front",
 			"path": "angular-front"
+		},
+		{
+			"name": "docs",
+			"path": "docs"
 		}
 	],
 	"settings": {}
