@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker-british-english",
+        "vivaxy.vscode-conventional-commits",
+        "zoma.vscode-auto-open-workspace",
+        "eamodio.gitlens",
+        "biomejs.biome"
+    ]
+}

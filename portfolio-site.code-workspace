@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "portfolio-web-api",
-			"path": "portfolio-web-api"
+			"name": "webapi",
+			"path": "webapi"
 		},
 		{
 			"name": "angular-front",

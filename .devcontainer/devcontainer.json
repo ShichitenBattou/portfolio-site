@@ -32,10 +32,11 @@
 		}
 	},
 	"containerEnv": {
-		"AQUA_HOME": "/home/vscode/.local/share/aquaproj-aqua"
+		"AQUA_HOME": "/home/vscode/.local/share/aquaproj-aqua",
+		"VOLTA_HOME": "/home/vscode/.volta"
 	},
 	"remoteEnv": {
-		"PATH": "/home/vscode/.local/share/aquaproj-aqua/bin:${containerEnv:PATH}"
+		"PATH": "${containerEnv:VOLTA_HOME}/bin:/home/vscode/.local/share/aquaproj-aqua/bin:${containerEnv:PATH}"
 	},
 	"onCreateCommand": "bash /workspaces/portfolio-site/.devcontainer/onCreateCommand.sh"
 }

@@ -1,0 +1,10 @@
+{
+    "autoOpenWorkspace.enableAutoOpenAlwaysFirst": true,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    }
+}
