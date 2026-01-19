@@ -17,17 +17,11 @@
 				"vivaxy.vscode-conventional-commits",
 				"zoma.vscode-auto-open-workspace",
 				"eamodio.gitlens",
-				"biomejs.biome"
+				"biomejs.biome",
+				"ms-azuretools.vscode-docker"
 			],
 			"settings": {
-				"autoOpenWorkspace.autoOpen": "always",
-				"editor.formatOnSave": true,
-				"[javascript]": {
-					"editor.defaultFormatter": "biomejs.biome"
-				},
-				"[typescript]": {
-					"editor.defaultFormatter": "biomejs.biome"
-				}
+				"autoOpenWorkspace.autoOpen": "always"
 			}
 		}
 	},
@@ -38,5 +32,9 @@
 	"remoteEnv": {
 		"PATH": "${containerEnv:VOLTA_HOME}/bin:/home/vscode/.local/share/aquaproj-aqua/bin:${containerEnv:PATH}"
 	},
-	"onCreateCommand": "bash /workspaces/portfolio-site/.devcontainer/onCreateCommand.sh"
+	"onCreateCommand": "bash /workspaces/portfolio-site/.devcontainer/onCreateCommand.sh",
+	"forwardPorts": [
+		3000,
+		4200
+	]
 }
