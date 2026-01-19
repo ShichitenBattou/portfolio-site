@@ -31,4 +31,4 @@ RUN npm ci --omit=dev
 EXPOSE 4000
 
 # Start the SSR server
-CMD ["npm", "run", "serve:ssr:angular-front"]
+CMD ["npm", "run", "start"]

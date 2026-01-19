@@ -9,13 +9,21 @@
 			"path": "webapi"
 		},
 		{
-			"name": "angular-front",
-			"path": "angular-front"
+			"name": "frontend",
+			"path": "frontend"
 		},
 		{
 			"name": "docs",
 			"path": "docs"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.formatOnSave": true,
+		"[javascript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "biomejs.biome"
+		}
+	}
 }
