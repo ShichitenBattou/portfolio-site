@@ -53,3 +53,7 @@ Thumbs.db
 
 # TypeScript
 *.tsbuildinfo
+
+# Key files
+*.crt
+*.key
