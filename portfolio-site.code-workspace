@@ -24,6 +24,9 @@
 		},
 		"[typescript]": {
 			"editor.defaultFormatter": "biomejs.biome"
+		},
+		"[nginx]": {
+			"editor.formatOnSave": false
 		}
 	}
 }

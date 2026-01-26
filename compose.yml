@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     container_name: portfolio-frontend
     ports:
-      - 4000
+      - 3000
     environment:
       - NODE_ENV=development
       - API_URL=http://localhost:80/api/
@@ -39,7 +39,8 @@ services:
       - "443:443"
     depends_on:
       - webapi
-      - angular-front
+      - frontend
+      - keycloak
     networks:
       - portfolio-network
     restart: unless-stopped
@@ -47,7 +48,7 @@ services:
   keycloak:
     image: quay.io/keycloak/keycloak:latest
     container_name: keycloak
-    command: start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme--cache-templates=false --proxy-headers xforwarded --hostname=localhost --http-enabled=true
+    command: start --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme--cache-templates=false --proxy-headers xforwarded --hostname=https://localhost --http-enabled=true
     environment:
       KC_DB: ${KC_DB}
       KC_DB_URL: ${KC_DB_URL}
@@ -57,8 +58,6 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
     volumes:
-      - ./keycloak/keys/certfile.pem:/.keys/certfile.pem:ro
-      - ./keycloak/keys/keyfile.pem:/.keys/keyfile.pem:ro
       - ./keycloak/themes:/opt/keycloak/themes
     ports:
       - 8080
@@ -66,7 +65,7 @@ services:
       keycloak-db:
         condition: service_healthy
     networks:
-      - keycloak-network
+      - portfolio-network
 
   keycloak-db:
     image: postgres:17
@@ -80,36 +79,16 @@ services:
     volumes:
       - keycloak-db-data:/var/lib/postgresql/data
     networks:
-      - keycloak-network
+      - portfolio-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  keycloak-nginx:
-    image: nginx:1.28.0
-    container_name: keycloak-nginx
-    volumes:
-      - ./keycloak-nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./keycloak/keys:/.keys:ro
-    ports:
-      - "80:180"
-      - "443:1443"
-    depends_on:
-      - keycloak
-    networks:
-      - keycloak-network
-
 networks:
   portfolio-network:
     driver: bridge
-  keycloak-network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.30.0.0/24
-    name: portfolio-keycloak-network
 
 volumes:
   keycloak-db-data:
