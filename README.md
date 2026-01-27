@@ -1,6 +1,4 @@
-<div style="display: flex; justify-content: center;">
-  <img style="width: 500px;" src="./portfolio-1.svg"/>
-</div>
+<img src="./portfolio-1.svg"/>
 
 ## 概要
 
@@ -8,7 +6,7 @@ Webシステムのポートフォリオ
 
 ## 動作要件
 
-### <img style="height:15; vertical-align: middle; position: relative; bottom: 2px"  src="./docker-mark-blue.svg"> [Docker Desktop](https://docs.docker.com/desktop/)
+### [Docker Desktop](https://docs.docker.com/desktop/)
 
 アプリケーションの開発・起動用 \
 ※後述するVSCodeのDev Containersの動作要件にもなります。
@@ -16,7 +14,7 @@ Webシステムのポートフォリオ
   * [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
   * [Windows](https://docs.docker.com/desktop/setup/install/windows-install/) ※WSL用の設定を推奨
 
-### <img style="height:15; vertical-align: middle; position: relative; bottom: 1px" src="./vscode.svg"> [VSCode](https://code.visualstudio.com/) 
+### [VSCode](https://code.visualstudio.com/) 
 
 コードエディター \
 DevContainersを使用するため、エディターですが実質必須
@@ -26,7 +24,7 @@ DevContainersを使用するため、エディターですが実質必須
 
 ## 動作要件（ローカル起動する場合）
 
-### <img style="height:17; vertical-align: middle; position: relative; bottom: 1px" src="./aqua_without_text.svg"> [aqua](https://aquaproj.github.io/docs/install/)　
+### [aqua](https://aquaproj.github.io/docs/install/)　
 
 各種ツールのインストール用 
 
