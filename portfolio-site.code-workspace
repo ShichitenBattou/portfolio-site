@@ -27,6 +27,12 @@
 		},
 		"[nginx]": {
 			"editor.formatOnSave": false
+		},
+		"github.copilot.enable": {
+			"*": true,
+			"markdown": false,
+			"plaintext": false,
+			"comment": false,
 		}
 	}
 }
